@@ -101,16 +101,16 @@ class Classifier:
 
         plt.figure(figsize=(8, 8))
         plt.subplot(1, 2, 1)
-        plt.plot(epochs_range, acc, label='Eğitim Doğruluğu')
-        plt.plot(epochs_range, val_acc, label='Doğrulama Doğruluğu')
+        plt.plot(epochs_range, acc, label='Train Accuracy')
+        plt.plot(epochs_range, val_acc, label='Validation Accuracy')
         plt.legend(loc='lower right')
-        plt.title('Doğruluk')
+        plt.title('Accuracy')
 
         plt.subplot(1, 2, 2)
-        plt.plot(epochs_range, loss, label='Eğitim Kaybı')
-        plt.plot(epochs_range, val_loss, label='Doğrulama Kaybı')
+        plt.plot(epochs_range, loss, label='Training Loss')
+        plt.plot(epochs_range, val_loss, label='Validation Loss')
         plt.legend(loc='upper right')
-        plt.title('Kayıp')
+        plt.title('Loss')
         plt.show()
         
     def save_model(self):
